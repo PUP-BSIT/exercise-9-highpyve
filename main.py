@@ -50,10 +50,20 @@ def update_record():
 def delete_record():
     pass
 
-# TODO (ANIPAN): Create a function to search for a specific record
-def search_record():
-    pass
+def search_record(record_list):
 
+    print(f"There are {len(record_list)} available records in the record"
+            " list.\n")
+    
+    user_input = int(input(f"Enter Record Number from 1-{len(record_list)}: "))
+
+    if user_input >= 1 and user_input <= len(record_list):
+        for key in record_list[user_input - 1]:
+            print(f"{key}: {record_list[user_input - 1][key]}")
+    else: 
+        print("Record Number not found.\n")
+
+    input("\nPress Enter to return to the main menu...")
 
 def main():
     record_list = []
@@ -69,7 +79,7 @@ def main():
 
         choice = input("\nEnter your choice: ")
 
-        if not choice.isnumeric():
+        if not choice.isdigit():
             print("Please enter a valid number.")
             continue
 
@@ -90,7 +100,7 @@ def main():
                 delete_record()
             case 5:
                 clear()
-                search_record()
+                search_record(record_list)
             case 6:
                 print("Exiting HighPYve Tech Profile. Goodbye!")
                 break
