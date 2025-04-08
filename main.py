@@ -75,13 +75,15 @@ def search_record(record_list):
     print(f"There are {len(record_list)} available records in the record"
             " list.\n")
     
-    user_input = int(input(f"Enter Record Number from 1-{len(record_list)}: "))
+    user_input = input("Enter the name you are looking for: ")
 
-    if user_input >= 1 and user_input <= len(record_list):
-        for key in record_list[user_input - 1]:
-            print(f"{key}: {record_list[user_input - 1][key]}")
-    else: 
-        print("Record Number not found.\n")
+    for item in record_list:
+        if user_input.lower() == item["user_name"].lower():
+            for key, value in item.items():
+                print(f"{key}: {value}")
+    
+        else:
+            print("Record not found.")
 
     input("\nPress Enter to return to the main menu...")
 
