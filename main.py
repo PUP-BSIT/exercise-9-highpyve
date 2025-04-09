@@ -59,7 +59,7 @@ def update_record(record_list):
 
     if index is None:
         print("Record not found.")
-        pause
+        pause()
         return
 
     member = record_list[index]
@@ -70,11 +70,15 @@ def update_record(record_list):
     print("4 - Preferred Role")
     print("5 - Skill Level")
 
-    try:
-        update_choice = int(input("Enter choice: "))
-    except ValueError:
-        print("Invalid input. Please enter a number.")
-        return
+    while True:
+        try:
+            update_choice = int(input("Enter choice: "))
+            if update_choice in range(1, 6):
+                break
+            else:
+                print("Invalid choice. Please enter a number from 1 to 5.")
+        except ValueError:
+            print("Invalid input. Please enter a number.")
 
     match update_choice:
         case 1:
