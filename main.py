@@ -149,6 +149,13 @@ def main():
         "programming_language": "Python",
         "role": "Backend",
         "skill_level": "Beginner"
+        },
+        {
+        "user_name": "Jaira",
+        "course_section": "BSIT 2-1",
+        "programming_language": "Cobol",
+        "role": "Backend",
+        "skill_level": "Beginner"
         }
     ]
     
