@@ -97,7 +97,6 @@ def update_record(record_list):
     print("Record updated successfully.")
     input("\nPress Enter to return to the main menu...")
 
-# Function to delete a record
 def delete_record(record_list):
     if not record_list:
         print("No records available to delete.")
@@ -105,19 +104,18 @@ def delete_record(record_list):
         return
 
     print(f"There are {len(record_list)} available records.\n")
-    user_input = int(input(f"Enter Member Number ({len(record_list)}) "
-                           "to delete: ")) #keep columns under 80
-    #I used member number instead of record number
-    #because the display is Member 1, Member 2, etc. 
-    #This will make it easier to read
+    user_input = input("Enter the name of the member to delete: ")
 
-    if 1 <= user_input <= len(record_list):
-        deleted_record = record_list.pop(user_input - 1)
-        print(f"\nRecord {user_input} deleted successfully:")
-        for key, value in deleted_record.items():
-            print(f"{key}: {value}")
+    for index, record in enumerate(record_list):
+        if record["user_name"].lower() == user_input.lower():
+            deleted_record = record_list.pop(index)  
+            print(f"\nRecord deleted successfully:")
+
+            for key, value in deleted_record.items():
+                print(f"{key}: {value}")
+            break
     else:
-        print("Record Number not found.\n")
+        print("Record not found.\n")
 
     input("\nPress Enter to return to the main menu...")
 
