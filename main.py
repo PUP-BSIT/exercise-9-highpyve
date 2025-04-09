@@ -191,7 +191,7 @@ def main():
                 clear()
                 search_record(record_list)
             case 6:
-                print("Exiting HighPYve Tech Profile. Goodbye!")
+                print("Exiting HighPYve Members Tech Profile. Goodbye!")
                 break
             case _:
                 print("Invalid choice. Please select from the menu.")
