@@ -219,8 +219,8 @@ def main():
                 print("Exiting HighPYve Members Tech Profile. Goodbye!")
                 break
             case _:
-                print("Invalid choice. Please select from the menu.")
-                input("\nPress Enter to try again.")
+                print("\nInvalid choice. Please select from the menu.")
+                input("\nPress Enter to try again...")
                 continue
 
 main()
