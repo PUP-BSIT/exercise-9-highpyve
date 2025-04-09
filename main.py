@@ -3,6 +3,9 @@ import os
 def clear():
     os.system("cls")
 
+def pause():
+    input("\nPress Enter to return to the main menu...")
+
 def list_all_records(record_list):
     if not record_list:
         print("No records found.")
@@ -15,7 +18,7 @@ def list_all_records(record_list):
                 print(f"{key}: {value}")
             counter += 1
     
-    input("\nPress Enter to return to the main menu...")
+    pause()
 
 def add_record(record_list):
     user_name = input("\nEnter your name: ")
@@ -42,7 +45,7 @@ def add_record(record_list):
 def update_record(record_list):
     if not record_list:
         print("No records available to update.")
-        input("\nPress Enter to return to the main menu...")
+        pause()
         return
 
     user_input = input("\nEnter the name of the member you want to update: ")
@@ -58,7 +61,7 @@ def update_record(record_list):
 
     if index is None:
         print("Record not found.")
-        input("\nPress Enter to return to the main menu...")
+        pause
         return
 
     member = record_list[index]
@@ -95,12 +98,12 @@ def update_record(record_list):
             return
 
     print("Record updated successfully.")
-    input("\nPress Enter to return to the main menu...")
+    pause()
 
 def delete_record(record_list):
     if not record_list:
         print("No records available to delete.")
-        input("\nPress Enter to return to the main menu...")
+        pause()
         return
 
     print(f"There are {len(record_list)} available records.\n")
@@ -117,7 +120,7 @@ def delete_record(record_list):
     else:
         print("Record not found.\n")
 
-    input("\nPress Enter to return to the main menu...")
+    pause()
 
 def search_record(record_list):
     print(f"There are {len(record_list)} available records in the record"
@@ -132,7 +135,7 @@ def search_record(record_list):
         else:
             print("Record not found.")
 
-    input("\nPress Enter to return to the main menu...")
+    pause()
 
 def main():
     record_list = [
