@@ -130,8 +130,9 @@ def search_record(record_list):
         if user_input.lower() == item["user_name"].lower():
             for key, value in item.items():
                 print(f"{key}: {value}")
-        else:
-            print("Record not found.")
+            break
+    else:
+        print("Record not found.\n")
 
     pause()
 
