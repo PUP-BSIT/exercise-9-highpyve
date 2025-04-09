@@ -10,13 +10,11 @@ def list_all_records(record_list):
     if not record_list:
         print("No records found.")
     else:
-        print("\nList of All Users:")
-        counter = 1
-        for record in record_list:
+        print("\nList of All HighPYve Members:")
+        for counter, record in enumerate(record_list, start=1):
             print(f"\nMember {counter}:")
             for key, value in record.items():
                 print(f"{key}: {value}")
-            counter += 1
     
     pause()
 
