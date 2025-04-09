@@ -91,14 +91,16 @@ def main():
     record_list = []
     while True:
         clear()
-        print("\nHIGHPYVE TECH PROFILE")
-        print("\n1 - List All")
-        print("2 - Add")
-        print("3 - Update")
-        print("4 - Delete")
-        print("5 - Search")
-        print("6 - Exit")
-
+        print("\n==============================================")
+        print("||       HIGHPYVE MEMBERS TECH PROFILE      ||")
+        print("==============================================")
+        print("||  1 - List All                            ||")
+        print("||  2 - Add                                 ||")
+        print("||  3 - Update                              ||")
+        print("||  4 - Delete                              ||")
+        print("||  5 - Search                              ||")
+        print("||  6 - Exit                                ||")
+        print("==============================================")
         choice = input("\nEnter your choice: ")
 
         if not choice.isdigit():
