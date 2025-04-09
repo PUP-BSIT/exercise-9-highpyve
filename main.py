@@ -167,7 +167,7 @@ def main():
         choice = input("\nEnter your choice: ")
 
         if not choice.isdigit():
-            print("Please enter a valid number.")
+            input("\nPlease enter a valid number. Press Enter to try again.")
             continue
 
         choice = int(choice)
@@ -193,5 +193,7 @@ def main():
                 break
             case _:
                 print("Invalid choice. Please select from the menu.")
+                input("\nPress Enter to try again.")
+                continue
 
 main()
