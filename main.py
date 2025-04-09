@@ -21,7 +21,7 @@ def add_record(record_list):
     user_name = input("\nEnter your name: ")
     course_section = input("\nEnter your course and section : ")
     programming_language = input("\nEnter your preferred programming "
-                                "language (ex: Python) : ")
+                                 "language (ex: Python) : ")
     role = input("\nEnter your preferred role (ex: Backend) : ")
     skill_level = input("\nEnter your skill level (Beginner, Intermediate, "
                         "Advanced) : ")
@@ -154,6 +154,20 @@ def main():
         "user_name": "Jaira",
         "course_section": "BSIT 2-1",
         "programming_language": "Cobol",
+        "role": "Backend",
+        "skill_level": "Beginner"
+        },
+        {
+        "user_name": "Mikaela",
+        "course_section": "BSIT 2-1",
+        "programming_language": "C++",
+        "role": "Backend",
+        "skill_level": "Beginner"
+        },
+        {
+        "user_name": "Rose",
+        "course_section": "BSIT 2-1",
+        "programming_language": "Python",
         "role": "Backend",
         "skill_level": "Beginner"
         }
