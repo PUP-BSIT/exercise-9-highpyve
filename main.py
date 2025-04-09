@@ -143,7 +143,14 @@ def main():
         "course_section": "BSIT 2-1",
         "programming_language": "Python",
         "role": "Front-end",
-        "skill_level": "Beginner"}]
+        "skill_level": "Beginner"},
+        {
+        "user_name": "Kristoffer",
+        "course_section": "BSIT 2-1",
+        "programming_language": "Python",
+        "role": "Backend",
+        "skill_level": "Beginner"
+        }]
     
     while True:
         clear()
