@@ -18,7 +18,7 @@ def list_all_records(record_list):
     input("\nPress Enter to return to the main menu...")
 
 def add_record(record_list):
-    user_name = input("\nEnter your name (LN, FN MI) : ")
+    user_name = input("\nEnter your name: ")
     course_section = input("\nEnter your course and section : ")
     programming_language = input("\nEnter your preferred programming "
                                 "language (ex: Python) : ")
@@ -131,26 +131,28 @@ def search_record(record_list):
         if user_input.lower() == item["user_name"].lower():
             for key, value in item.items():
                 print(f"{key}: {value}")
-    
         else:
             print("Record not found.")
 
     input("\nPress Enter to return to the main menu...")
 
 def main():
-    record_list = [{        
+    record_list = [
+        {        
         "user_name": "Eurielle",
         "course_section": "BSIT 2-1",
         "programming_language": "Python",
         "role": "Front-end",
-        "skill_level": "Beginner"},
+        "skill_level": "Beginner"
+        },
         {
         "user_name": "Kristoffer",
         "course_section": "BSIT 2-1",
         "programming_language": "Python",
         "role": "Backend",
         "skill_level": "Beginner"
-        }]
+        }
+    ]
     
     while True:
         clear()
